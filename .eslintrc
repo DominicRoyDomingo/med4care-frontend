@@ -1,0 +1,40 @@
+/* .eslintrc
+ * ES Lint file
+ *
+ * used to prevent syntax errors and check warnings in JS files.
+ * add rules as necessary, take note of its caveats
+ *
+ * note: does not override use of Prettier (.prettierrc).
+ * Prettier will perform formatting and if are using VS Code,
+ * could enable automatic formatting upon save, which is cool :)
+ *
+ * author: Dominic Domingo
+ * created: 11/2019
+ *
+ */
+
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "no-unused-vars": "off", // disables linting errors for unused vars
+    "semi": "off", // disables no semicolon errors
+    "no-undef": "off", // disable undefined keyword errors
+    "no-constant-condition": "off" // disable checking for conditions equating with constant values
+  }
+}
